@@ -1,0 +1,52 @@
+# destinations= {"Goa" "Chennai Banglore Raichur",
+#     "Aurnagabad Jammu Raipur Nasik",
+#     "Goa Udaipur Hyderabad Manali",
+#     "Dargeeling Kashmir Surat Kolkata",
+#     "Mumbai Kolhapur Nagpur Delhi"}
+
+# distances= [159 232 300 123,
+#             232 198 219 645,
+#             152 245 195 200,
+#             132 198 129 212,
+#             167 198 235 217]
+
+#output
+# #769
+# #Raichur Jammu Goa Surat Mumbai
+
+
+
+dist1 = [[159, 232, 300, 123], [232, 198, 219, 645], [152, 245, 195, 200], [132, 198, 129, 212], [167, 198, 235, 217]]
+dic1 = {'Goa': 159, 'chennai': 232, 'Banglore': 300, 'Raichur': 123}
+dic2 = {'Aurangabad': 232, 'Jammu': 198, 'Raipur': 219, 'Nasik': 645}
+dic3 = {'Goa': 152, 'Udaipur': 245, 'Hyderabad': 195, 'Manali': 200, }
+dic4 = {'Dargeeling': 132, 'Kashmir': 198, 'Surat': 129, 'Kolkata': 212, }
+dic5 = {'Mumbai': 167, 'Kolhapur': 198, 'Nagpur': 235, 'Delhi': 217}
+
+a = 0
+b = []
+for i in range(0, len(dist1)):
+    a = min(dist1[i])
+    b.append(a)
+print(sum(b))
+# print(b)
+# b = [123, 198, 152, 129, 167] #list of values
+for item in dic1:
+    if dic1[item] == b[0]:
+        print(item, end=" ")
+
+for item in dic2:
+    if dic2[item] == b[1]:
+        print(item, end=" ")
+
+for item in dic3:
+    if dic3[item] == b[2]:
+        print(item, end=" ")
+
+for item in dic4:
+    if dic4[item] == b[3]:
+        print(item, end=" ")
+
+for item in dic5:
+    if dic5[item] == b[4]:
+        print(item, end=" ")
